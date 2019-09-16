@@ -67,7 +67,7 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     {
-      resolve: '@littleplusbig/gatsby-theme-legals-prismic',
+      resolve: '@littleplusbig/gatsby-theme-faqs-prismic',
       options: {
         prismicRepositoryName: PRISMIC_REPO_NAME,
         prismicAccessToken: PRISMIC_API_KEY,

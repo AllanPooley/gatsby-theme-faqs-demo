@@ -13,7 +13,7 @@ class Index extends Component {
         page: {
           data: pageData,
         },
-        legalPages,
+        faqPages,
       },
       location,
     } = this.props;
@@ -28,7 +28,7 @@ class Index extends Component {
       metaDescription,
       openGraphImage,
     };
-    const legalPageData = legalPages.edges.map(page => ({
+    const faqPageData = faqPages.edges.map(page => ({
       slug: page.node.uid,
       title: page.node.data.pageTitle.text,
     }));
@@ -38,21 +38,21 @@ class Index extends Component {
           <Wrapper>
             <div className="container">
               <div className="inner-container">
-                <span className="magic-command">yarn add @littleplusbig/gatsby-theme-legals-prismic</span>
-                <h1 className="title">Gatsby Theme Legals</h1>
+                <span className="magic-command">yarn add @littleplusbig/gatsby-theme-faqs-prismic</span>
+                <h1 className="title">Gatsby Theme FAQs</h1>
                 <div className="subtitle">
-                  <p>Makes legal documents easy to read.</p>
-                  <p>Check out the demos below.</p>
+                  <p>A Frequently Asked Questions page template.</p>
+                  <p>Check out the demo below.</p>
                 </div>
                 <ul className="navigation-buttons">
-                  { legalPageData && legalPageData.map(page => (
+                  { faqPageData && faqPageData.map(page => (
                     <li className="nav-button">
                       <Link
                         className="styled-button"
                         key={page.slug}
                         to={page.slug}
                       >
-                        <span>{`Demo ${page.title}`}</span>
+                        <span>{`${page.title} Demo`}</span>
                       </Link>
                     </li>
                   ))}
@@ -108,7 +108,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    legalPages: allPrismicLegal {
+    faqPages: allPrismicFrequentlyAskedQuestions {
       edges {
         node {
           uid
