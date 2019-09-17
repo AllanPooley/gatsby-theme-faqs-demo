@@ -4,8 +4,8 @@ export default {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-    primary: '#1e3799',
-    primaryLight: '#4a69bd',
-    primaryDark: '#0c2461',
+    primary: '#8BC34A',
+    primaryLight: '#CDDC39',
+    primaryDark: '#4CAF50',
   },
 };
