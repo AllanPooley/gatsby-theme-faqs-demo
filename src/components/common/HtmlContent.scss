@@ -55,32 +55,20 @@
   ul, ol {
     width: 90%;
     padding-left: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     li {
       margin-left: 15px;
       margin-bottom: 20px;
-      font-weight: $font-weight-medium;
     }
   }
 
   ul {
-    list-style-type: none;
+    list-style-type: disc;
 
     li {
+      list-style-type: disc;
       position: relative;
-
-      &:before {
-        content: '';
-        height: 3px;
-        width: 3px;
-        border: 2px solid $primary;
-        border-radius: 50%;
-        position: absolute;
-        top: 10px;
-        left: -25px;
-        z-index: 1;
-      }
     }
   }
 
@@ -88,6 +76,7 @@
     list-style-type: decimal;
 
     li {
+      list-style-type: decimal;
       margin-left: 10px;
       text-indent: 0.5em;
     }
